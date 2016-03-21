@@ -12,7 +12,27 @@
 		F675E4DC1C9C36A100B678EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F675E4DA1C9C36A100B678EF /* Main.storyboard */; };
 		F675E4DE1C9C36A100B678EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F675E4DD1C9C36A100B678EF /* Assets.xcassets */; };
 		F675E4E11C9C36A100B678EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F675E4DF1C9C36A100B678EF /* LaunchScreen.storyboard */; };
+		F683A1E11C9FC4A90013B670 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F683A1DF1C9FC4A90013B670 /* RealmSwift.framework */; };
+		F683A1E21C9FC4A90013B670 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F683A1DF1C9FC4A90013B670 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F683A1E31C9FC4A90013B670 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F683A1E01C9FC4A90013B670 /* Realm.framework */; };
+		F683A1E41C9FC4A90013B670 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F683A1E01C9FC4A90013B670 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F683A1E81C9FCAE20013B670 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = F683A1E71C9FCAE20013B670 /* Person.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F683A1E51C9FC4A90013B670 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F683A1E41C9FC4A90013B670 /* Realm.framework in Embed Frameworks */,
+				F683A1E21C9FC4A90013B670 /* RealmSwift.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		F675E4D31C9C36A100B678EF /* UsingDatabase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UsingDatabase.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,6 +42,9 @@
 		F675E4DD1C9C36A100B678EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F675E4E01C9C36A100B678EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F675E4E21C9C36A100B678EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F683A1DF1C9FC4A90013B670 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		F683A1E01C9FC4A90013B670 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		F683A1E71C9FCAE20013B670 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +52,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F683A1E31C9FC4A90013B670 /* Realm.framework in Frameworks */,
+				F683A1E11C9FC4A90013B670 /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +63,8 @@
 		F675E4CA1C9C36A100B678EF = {
 			isa = PBXGroup;
 			children = (
+				F683A1DF1C9FC4A90013B670 /* RealmSwift.framework */,
+				F683A1E01C9FC4A90013B670 /* Realm.framework */,
 				F675E4D51C9C36A100B678EF /* UsingDatabase */,
 				F675E4D41C9C36A100B678EF /* Products */,
 			);
@@ -60,6 +87,7 @@
 				F675E4DD1C9C36A100B678EF /* Assets.xcassets */,
 				F675E4DF1C9C36A100B678EF /* LaunchScreen.storyboard */,
 				F675E4E21C9C36A100B678EF /* Info.plist */,
+				F683A1E71C9FCAE20013B670 /* Person.swift */,
 			);
 			path = UsingDatabase;
 			sourceTree = "<group>";
@@ -74,6 +102,8 @@
 				F675E4CF1C9C36A100B678EF /* Sources */,
 				F675E4D01C9C36A100B678EF /* Frameworks */,
 				F675E4D11C9C36A100B678EF /* Resources */,
+				F683A1E51C9FC4A90013B670 /* Embed Frameworks */,
+				F683A1E61C9FC5A90013B670 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -130,11 +160,28 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		F683A1E61C9FC5A90013B670 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework/strip-frameworks.sh\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F675E4CF1C9C36A100B678EF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F683A1E81C9FCAE20013B670 /* Person.swift in Sources */,
 				F675E4D91C9C36A100B678EF /* ViewController.swift in Sources */,
 				F675E4D71C9C36A100B678EF /* AppDelegate.swift in Sources */,
 			);
@@ -249,9 +296,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = UsingDatabase/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.practice.sekai.UsingDatabase;
+				PRODUCT_BUNDLE_IDENTIFIER = com.practice.sekai.UsingDatabaseRealm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -260,9 +311,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = UsingDatabase/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.practice.sekai.UsingDatabase;
+				PRODUCT_BUNDLE_IDENTIFIER = com.practice.sekai.UsingDatabaseRealm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -286,6 +341,7 @@
 				F675E4E71C9C36A100B678EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
